@@ -1,0 +1,17 @@
+// KodeUp color pallete
+
+$kodeup-colors: (
+    'background': #E9E9E9, // shaded white
+    'foreground': #191919, // black grey
+    'primary':    #800080, // purple
+    'secondary':  #FFFF00, // yellow
+    'accent' :    #D0A2D0, // tinted purple
+);
+
+// retrieve colors from our palette
+
+@function kodeup-color ($key: 'primary') {
+
+    @return map-get($kodeup-colors, $key);
+
+}
