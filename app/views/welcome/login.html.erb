@@ -1,2 +1,29 @@
-<h1>Welcome#login</h1>
-<p>Find me in app/views/welcome/login.html.erb</p>
+<%= csrf_meta_tags %>
+
+<section class="loginHead">
+     <div class="loginHead__logo">
+     <%= image_tag 'kodeup-logo-medium1.png' %>
+    </div>
+</section>
+
+<section class="loginMain">
+    <%= form_tag "/welcome/create" do %>
+        <%= label_tag "username", "Username or Email", class: "loginMain__label" %>
+        <%= text_field_tag "username", nil, class: "loginMain__textbox" %>
+
+        <%= label_tag "password", "Password", class: "loginMain__label" %>
+        <%= password_field_tag "password", nil, class: "loginMain__textbox" %>
+
+        <%= submit_tag "Login", class: "loginMain__btn" %>
+    <% end %>
+
+    <div class="loginMain__signuptext">
+        Or Sign UP Here.
+    </div>
+</section>
+
+<section class="loginFooter">
+    <div class="loginFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>
