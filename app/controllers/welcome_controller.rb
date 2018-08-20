@@ -7,7 +7,8 @@ class WelcomeController < ApplicationController
   end
 
   def create
-	  redirect_to posts_url
+    #redirect_to posts_url
+    render html: params
   end
 
   private
