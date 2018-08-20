@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete 'welcome/destroy'
   
   # appliacation's root
-  root 'welcome#login'
+  root 'welcome#index'
 
   # users
   resources :users
