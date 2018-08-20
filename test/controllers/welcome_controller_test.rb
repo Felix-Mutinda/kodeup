@@ -11,8 +11,8 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get create" do
-    get welcome_create_url
+  test "should post create" do
+    post welcome_create_url
     assert_response :success
   end
 
