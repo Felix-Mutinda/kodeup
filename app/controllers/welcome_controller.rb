@@ -3,10 +3,11 @@ class WelcomeController < ApplicationController
   end
 
   def login
+    
   end
 
   def create
-	
+	  redirect_to posts_url
   end
 
   private

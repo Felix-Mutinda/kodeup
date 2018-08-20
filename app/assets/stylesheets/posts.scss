@@ -1,3 +1,43 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "color";
+
+.postsIndexHead {
+    &__nav {
+        
+        &--logo {
+            width: 280px;
+            height: 100px;
+            padding: 0px;
+            margin: 0px;
+            float: left;
+        }
+
+        &--logo:hover {
+            cursor: pointer;
+        }
+
+        &--signout {
+            width: 100px;
+            height: 48px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 48px;
+            border: 1.5px solid kodeup-color('primary');
+            cursor: pointer;
+            transition: all .2s;
+            float: right;
+            margin-top: 24px;
+        }
+    }
+}
+
+
+.postsIndexFooter {
+    margin: 0px 300px;
+
+    &__text {
+        //text-align: center;
+        vertical-align: middle;
+        line-height: 32px;
+        letter-spacing: 2.3px;
+    }
+}
