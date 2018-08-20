@@ -8,4 +8,9 @@ class WelcomeController < ApplicationController
   def create
 	
   end
+
+  private
+		def login_params
+			params.permit(:username, :password)
+		end
 end
