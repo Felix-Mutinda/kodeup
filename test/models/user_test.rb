@@ -42,12 +42,20 @@ class UserTest < ActiveSupport::TestCase
 
   test "email validation should reject invalid email addresses" do
     invalid_addresses = %w[user@example,com us_er_foo.com user@forr. 
-                            first@foo_bax.com last@tty+vim.com ]
+                            first@foo_bax.com last@tty+vim.com last@yoo..ghg...com ]
 
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
       assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
     end
+  end
+
+  test "email addresses should be unique" do
+    duplicate_user = @user.dup
+    duplicate_user.email = @user.email.upcase
+    @user.save
+
+    assert_not duplicate_user.valid?
   end
 
 end
