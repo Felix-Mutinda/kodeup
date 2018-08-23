@@ -1,7 +1,10 @@
 class User < ApplicationRecord
     has_many :posts
-    validates :email, presence: true
-    validates :username, presence: true
-    validates :username, length: {maximum: 50}
-    validates :email, length: { maximum: 255 }
+    validates :username, presence: true, length: {maximum: 50}
+    
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\-\d.]+\.[a-z]+\z/i
+    validates :email, length: { maximum: 255 },
+                format:  { with: VALID_EMAIL_REGEX }
 end
+    
+
