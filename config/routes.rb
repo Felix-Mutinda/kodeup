@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'welcome/login'
   post 'welcome/create'
   delete 'welcome/destroy'
+
+  # signup
+  get 'signup', to: 'users#new'
   
   # appliacation's root
   root 'welcome#index'
