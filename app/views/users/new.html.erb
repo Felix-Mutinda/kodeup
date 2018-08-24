@@ -7,5 +7,33 @@
 </section>
 
 <section class="UsersMain">
-    
+    <%= form_for @user, local: true do |form| %>
+        <%= form.label :username, class: "UsersMain__label" %>
+        <%= form.text_field :username, class: "UsersMain__textbox" %>
+
+        <%= form.label :email, class: "UsersMain__label" %>
+        <%= form.text_field :email, class: "UsersMain__textbox" %>
+
+        <%= form.label :user_type, class: "UsersMain__label" %>
+        <%= form.select :user_type, [["Viewer"], ["Author"]], class: "UsersMain__textbox" %>
+
+        <%= form.label :password, class: "UsersMain__label" %>
+        <%= form.password_field :password, class: "UsersMain__textbox" %>
+
+        <%= form.label :password_confirmation, class: "UsersMain__label", value: "Confirm Password" %>
+        <%= form.password_field :password_confirmation, class: "UsersMain__textbox" %>
+
+        <%= form.submit "Sign UP", class: "UsersMain__btn"%>
+    <% end %>
+
+    <div class="UsersMain__logintext">
+        Or Login To Your Account.
+    </div>
+</section>
+
+
+<section class="UsersFooter">
+    <div class="UsersFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
 </section>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # session management
   get 'welcome/index'
   get 'welcome/login'
+  get '/login', to: 'welcome#login'
   post 'welcome/create'
   delete 'welcome/destroy'
 
