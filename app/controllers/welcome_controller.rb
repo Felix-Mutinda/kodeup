@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    
   end
 
   def login
@@ -13,6 +14,7 @@ class WelcomeController < ApplicationController
 
     if @current_user && (@current_user.password == params[:password])
       session[:current_user] = @current_user.id
+     
       render html: "User is sucessfuly logged in, Authority #{@current_user.user_type}"
     else 
       render html: "Invalid username or Password!"
