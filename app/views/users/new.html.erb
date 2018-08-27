@@ -1,5 +1,13 @@
 <% provide(:title, "Sign Up") %>
 
+ <% if @user.errors.any? %>
+    <section class="ErrorsFlash">
+        <% @user.errors.full_messages.each do |error| %>
+        <span><%= error %> |</span>
+        <% end %>
+    </section>
+<% end %>
+
 <section class="UsersHeader">
     <div class="UsersHeader__logo">
         <%= image_tag 'kodeup-logo-medium2.png' %>
@@ -9,6 +17,7 @@
         <%= image_tag 'kodeup-getwet1.png' %>
         <span class="UsersHeader__getwettxt">From zero to deploy!</span>
     </div>
+
 </section>
 
 <section class="UsersMain">
