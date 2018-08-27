@@ -4,6 +4,11 @@
     <div class="UsersHeader__logo">
         <%= image_tag 'kodeup-logo-medium2.png' %>
     </div>
+
+    <div class="UsersHeader__getwet">
+        <%= image_tag 'kodeup-getwet1.png' %>
+        <span class="UsersHeader__getwettxt">From zero to deploy!</span>
+    </div>
 </section>
 
 <section class="UsersMain">
@@ -27,7 +32,7 @@
     <% end %>
 
     <div class="UsersMain__logintext">
-        Or Login To Your Account.
+        <%= link_to 'Or Login To Your Account.', login_path %>
     </div>
 </section>
 
