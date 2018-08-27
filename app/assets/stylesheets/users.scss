@@ -51,7 +51,7 @@ aside {
 // UsersMain
 .UsersMain {
     width: 460px;
-    height: 450px;
+    height: 550px;
     margin-left: 250px;
     padding: 16px;
     padding-top: 48px;
@@ -61,20 +61,20 @@ aside {
     letter-spacing: .5px;
 
     &__label {
-        font-size: 16pt;
+        font-size: 12pt;
         margin: 0px 48px;
     }
 
-    &__textbox {
+    &__textbox, select {
         width: 340px;
-        height: 48px;
-        margin-bottom:  48px;
+        height: 32px;
+        margin-bottom:  32px;
         margin-left: 48px;
-        font-size: 16pt;
+        font-size: 12pt;
         font-weight: 100;
         box-sizing: border-box;
         border: 1px solid kodeup-color('primary');
-        border-radius: 1px;
+        border-radius: 4px;
     }
 
     // &__textbox:hover {
@@ -83,7 +83,7 @@ aside {
     
     &__btn {
         width: 340px;
-        height: 48px;
+        height: 40px;
         box-sizing: border-box;
         margin-left: 48px;
         font-size: 16pt;
@@ -101,7 +101,7 @@ aside {
     &__logintext {
         color: kodeup-color('primary');
         font-size: 12pt;
-        margin-top: 16px;
+        margin-top: 12px;
         margin-left: 48px;
     }
 
@@ -115,7 +115,7 @@ aside {
 .UsersFooter {
     &__text {
         @include footer;
-        bottom: 0px;
-        left: 450px;
+       // bottom: 0px;
+        left: 400px;
     }
 }
