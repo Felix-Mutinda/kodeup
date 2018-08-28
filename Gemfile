@@ -64,3 +64,7 @@ end
 
 # for has_secure_password
 gem 'bcrypt'
+
+
+# for assert_template
+gem "rails-controller-testing"
