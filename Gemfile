@@ -67,4 +67,4 @@ gem 'bcrypt'
 
 
 # for assert_template
-gem "rails-controller-testing"
+# gem "rails-controller-testing"

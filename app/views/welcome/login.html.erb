@@ -1,9 +1,11 @@
 <%= csrf_meta_tags %>
 
 <section class="loginHead">
-     <div class="loginHead__logo">
-     <%= image_tag 'kodeup-logo-medium1.png' %>
-    </div>
+    <a href="/">
+        <div class="loginHead__logo">
+        <%= image_tag 'kodeup-logo-medium1.png' %>
+        </div>
+    </a>
 </section>
 
 <% if !@myFlash.empty? %>
