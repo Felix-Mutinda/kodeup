@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def index
-        redirect_to root_url
+        redirect_to signup_url
     end
 
     def show
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
+            flash[:notice] = " "
             redirect_to posts_path
         else
             render "new"

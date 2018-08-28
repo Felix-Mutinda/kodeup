@@ -1,10 +1,20 @@
 <% provide(:title, "Sign Up") %>
+<script type='text/javascript'>
+    function exit() {
+        document.getElementsByClassName('ErrorsFlash')[0].style.display = "none";
+        document.getElementsByClassName('ExitErrorsFlash')[0].style.display = "none";
+    }
+</script>
 
  <% if @user.errors.any? %>
     <section class="ErrorsFlash">
         <% @user.errors.full_messages.each do |error| %>
         <span><%= error %> |</span>
         <% end %>
+    </section>
+
+    <section class="ExitErrorsFlash" onclick="exit();">
+        X
     </section>
 <% end %>
 

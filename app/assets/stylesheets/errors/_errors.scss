@@ -1,8 +1,25 @@
 // ErrorsFlash 
-.ErrorsFlash {
+.ErrorsFlash, .ExitErrorsFlash {
     background-color: kodeup-color("error-bg");
     color: kodeup-color("error-fg");
     text-align: center;
-    border: 1px solid kodeup-color("primary");
+    border: 1px solid kodeup-color("error-br");
     border-radius: 5px;
+    font-size: 14px;
+    
+}
+
+.ExitErrorsFlash {
+    position: absolute;
+    top: 5px;
+    right: 60px;
+    width: 25px;
+    height: 25px;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.ExitErrorsFlash:hover {
+    color: kodeup-color('error-br');
+    cursor: pointer;
 }

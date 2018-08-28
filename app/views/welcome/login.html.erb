@@ -6,6 +6,12 @@
     </div>
 </section>
 
+<% if !@myFlash.empty? %>
+    <section class="LoginErrorsFlash">
+        <span><%= @myFlash %></span>
+    </section>
+<% end %>
+
 <section class="loginMain">
     <%= form_tag "/welcome/create" do %>
         <%= label_tag "username", "Username or Email", class: "loginMain__label" %>

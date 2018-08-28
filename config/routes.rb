@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'welcome/login'
   get '/login', to: 'welcome#login'
   post 'welcome/create'
+  get 'welcome/create', to: 'welcome#login'
   delete 'welcome/destroy'
 
   # signup

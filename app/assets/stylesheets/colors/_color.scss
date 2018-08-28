@@ -7,8 +7,9 @@ $kodeup-colors: (
     'secondary':  #f4f455ff, // yellow
     'accent' :    #D0A2D0, // tinted purple
     'main-background': #ffffff, // white
-    'error-bg': #F1C40F, // sunflower
-    'error-fg': #7F8C8D, // asbestos
+    'error-bg': #f2dede,
+    'error-fg': #a94442, 
+    'error-br': #ebccd1,
 );
 
 // retrieve colors from our palette
