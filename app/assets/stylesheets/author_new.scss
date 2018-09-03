@@ -1,0 +1,51 @@
+@import "colors/color";
+
+.authorNew--btn, .authorshow--btn {
+    width: 100px;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    border: 1px solid kodeup-color('primary');
+    cursor: pointer;
+    transition: all .2s;
+    margin: 8px 0px;
+    transition: all 0s;
+    color: kodeup-color('primary');
+    font-size: 14pt;
+    border-radius: 3px;
+    background-color: kodeup-color('background');
+    //background-color: kodeup-color('accent');
+}
+
+.authorshow--btn {
+    display: inline-block;
+}
+
+.authorNew--btn:hover, .authorshow--btn:hover {
+    background-color: kodeup-color('primary');
+    color: kodeup-color('main-background');
+}
+
+.authorNew__title--text, .authorNew__body--text {
+    font-size: 22pt;
+    font-weight: bold;
+    letter-spacing: 3.2px;
+    
+}
+
+.authorNew__title--body, .authorNew__body--body {
+    min-width: 100%;
+    max-width: 100%;
+    height: 32px;
+    border-radius: 2px;
+    border: .5px solid kodeup-color('accent');
+    font-size: 14pt;
+    font-family: 'Open Sans', sans-serif;
+    margin: 8px 0px;
+}
+
+.authorNew__body--body {
+    min-height: 200px;
+    max-height: 200px;
+}

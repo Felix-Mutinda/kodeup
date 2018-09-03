@@ -1,0 +1,48 @@
+
+<section class="postsIndexHead">
+    <div class="postsIndexHead__nav">
+        <a href = <%= root_path %> >
+            <div class="postsIndexHead__nav--logo">
+                <%= image_tag 'kodeup-logo-medium1.png' %>
+            </div>
+        </a>
+        
+        <a href=<%= logout_path %> data-method="delete" rel="nofollow">
+            <div class="postsIndexHead__nav--signout">
+            Sign Out
+            </div>
+        </a >
+
+    </div>
+
+    <div>
+    <hr class="head__hr">
+    </div>
+</section>
+
+<a href= <%= posts_path %> >
+    <div class="authorNew--btn">
+        Back
+    </div>
+</a >
+
+<section class="postsIndexMain">
+    <div  class="postsIndexMain__body">
+
+    <%= form_for(@post)  do |f| %>
+        <%= f.label :title,"Title",  class: "authorNew__title--text" %><br />
+        <%= f.text_field :title, class: "authorNew__title--body" %><br />
+      
+        <%= f.label :post, "Body",  class: "authorNew__body--text"%><br />
+        <%= f.text_area :post,  class: "authorNew__body--body" %>
+     
+    </div>
+</section>
+        <%= f.submit "Save", class: "authorNew--btn" %>
+    <% end %> <!-- forms end here -->
+
+<section class="postsIndexFooter" >
+    <div class="postsIndexFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>

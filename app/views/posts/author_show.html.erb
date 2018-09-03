@@ -1,0 +1,69 @@
+
+<section class="postsIndexHead">
+    <div class="postsIndexHead__nav">
+        <a href = <%= root_path %> >
+            <div class="postsIndexHead__nav--logo">
+                <%= image_tag 'kodeup-logo-medium1.png' %>
+            </div>
+        </a>
+        
+        <a href=<%= logout_path %> data-method="delete" rel="nofollow">
+            <div class="postsIndexHead__nav--signout">
+            Sign Out
+            </div>
+        </a >
+
+    </div>
+
+    <div>
+    <hr class="head__hr">
+    </div>
+</section>
+
+<a href= <%= posts_path %> >
+    <div class="authorshow--btn">
+        Back
+    </div>
+</a >
+
+<a href= <%= posts_path %> >
+    <div class="authorshow--btn">
+        Edit
+    </div>
+</a >
+
+<a href= <%= posts_path %> data-method="delete", data-confirm="Are you sure?", rel="nofollow">
+    <div class="authorshow--btn">
+        Delete
+    </div>
+</a >
+
+<section class="postsIndexMain">
+    <div  class="postsIndexMain__body">
+        <div class="authorshow--title" >
+            <%= @post.title %>
+        </div>
+
+        <div >
+            <hr class="postsIndexMain__body--hr">
+        </div>
+        
+        <div class="authorshow--text">
+            <%= @post.post %>
+        </div>
+
+        <div >
+            <hr class="postsIndexMain__body--hr">
+        </div>
+
+        <div class="authorshow--comments" >
+            blog comments here..
+        </div>
+    </div>
+</section>
+
+<section class="postsIndexFooter" >
+    <div class="postsIndexFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>

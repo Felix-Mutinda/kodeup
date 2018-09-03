@@ -1,0 +1,18 @@
+@import "colors/color";
+
+.authorshow--btn {
+    display: inline-block;
+}
+
+.authorshow--title {
+    font-size: 18px;
+    font-weight: bold;
+    color: kodeup-color("foreground");
+}
+
+.authorshow--text {
+    font-size: 16px;
+    font-weight: 300;
+    color: kodeup-color("foreground");
+    letter-spacing: 2px;
+}

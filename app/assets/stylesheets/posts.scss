@@ -1,0 +1,101 @@
+@import "colors/color";
+
+.postsIndexHead {
+    &__nav {
+        
+        &--logo {
+            width: 280px;
+            height: 100px;
+            padding: 0px;
+            margin: 0px;
+            float: left;
+        }
+
+        &--logo:hover {
+            cursor: pointer;
+        }
+
+        &--signout {
+            width: 100px;
+            height: 48px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 48px;
+            border: 1px solid kodeup-color('primary');
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all .2s;
+            float: right;
+            margin-top: 24px;
+            transition: all 0s;
+            color: kodeup-color('primary');
+            font-size: 14pt;
+            //background-color: kodeup-color('accent');
+        }
+
+        &--signout:hover {
+            border: 1px solid red;
+        }
+    }
+}
+
+.postsIndexMain {
+    width: 100%;
+    height: auto;
+    background-color: kodeup-color('main-background');
+    color: kodeup-color('primary');
+    border: 1px solid kodeup-color('accent');
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 20px;
+    
+
+    &__body {
+
+        &--btn {
+            width: 180px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            vertical-align: center;
+            letter-spacing: 3.2px;
+            border: 1px solid kodeup-color('primary');
+            font-size: 18pt;
+            font-weight: normal;
+            cursor: pointer;
+            border-radius: 3px;
+            color: kodeup-color('main-background');
+            background-color: kodeup-color('primary');
+            transition: all .2s;
+        }
+
+        &--btn:hover {
+            border: 1px solid kodeup-color('secondary');
+        }
+
+        &--hr {
+            border: 1px solid kodeup-color('accent');
+            background-color: kodeup-color('accent');
+        }
+
+        &--table {
+            padding: 20px 60px;
+        }
+    }
+}
+
+
+
+.postsIndexFooter {
+    //margin: 0px 300px;
+
+    &__text {
+        //text-align: center;
+        position: absolute;
+        left: 350px;
+        bottom: 0px;
+        vertical-align: middle;
+        line-height: 32px;
+        letter-spacing: 2.3px;
+    }
+}

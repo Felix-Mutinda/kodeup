@@ -1,0 +1,36 @@
+<%= csrf_meta_tags %>
+
+<section class="loginHead">
+    <a href="/">
+        <div class="loginHead__logo">
+        <%= image_tag 'kodeup-logo-medium1.png' %>
+        </div>
+    </a>
+</section>
+
+<% if @myFlash %>
+    <%= content_tag :div, @myFlash, class: "LoginErrorsFlash" %>
+<% end %>
+
+<section class="loginMain">
+    <%= form_tag(:login, url: "login", local: true ) do %>
+        <%= label_tag "username", "Username or Email", class: "loginMain__label" %>
+        <%= text_field_tag "username", nil, class: "loginMain__textbox", value: params[:username] %>
+
+        <%= label_tag "password", "Password", class: "loginMain__label" %>
+        <%= password_field_tag "password", nil, class: "loginMain__textbox" %>
+
+        <%= submit_tag "Login", class: "loginMain__btn" %>
+    <% end %>
+
+    <div class="loginMain__signuptext">
+        <%= link_to 'Or Sign UP Here.', signup_path %>
+    </div>
+</section>
+
+<section class="loginFooter">
+    <div class="loginFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>
+

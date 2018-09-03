@@ -1,0 +1,23 @@
+@import "colors/color";
+@import "index";
+@import "login";
+
+body {
+    background-color: kodeup-color('background');
+    color: kodeup-color('foreground');
+    margin: 0px 90px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    &__text {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 32px;
+        letter-spacing: 2.3px;
+    }
+}

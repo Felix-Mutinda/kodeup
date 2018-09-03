@@ -1,0 +1,40 @@
+
+<section class="postsIndexHead">
+    <div class="postsIndexHead__nav">
+        <a href = <%= root_path %> >
+            <div class="postsIndexHead__nav--logo">
+                <%= image_tag 'kodeup-logo-medium1.png' %>
+            </div>
+        </a>
+        
+        <a href=<%= logout_path %> data-method="delete" rel="nofollow">
+            <div class="postsIndexHead__nav--signout">
+            Sign Out
+            </div>
+        </a >
+
+    </div>
+
+    <div>
+    <hr class="head__hr">
+    </div>
+</section>
+
+<section class="postsIndexMain">
+    <div  class="postsIndexMain__body">
+        <table class="postsIndexMain__body--table">
+            <% @posts.each do |post| %>
+                <tr>
+                    <td><%= post.title %> </td>
+                    <td><%= link_to 'View', post_path(post) %> </td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</section>
+
+<section class="postsIndexFooter">
+    <div class="postsIndexFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>

@@ -1,0 +1,65 @@
+<% provide(:title, "Sign Up") %>
+<script type='text/javascript'>
+    function exit() {
+        document.getElementsByClassName('ErrorsFlash')[0].style.display = "none";
+        document.getElementsByClassName('ExitErrorsFlash')[0].style.display = "none";
+    }
+</script>
+
+ <% if @user.errors.any? %>
+    <section class="ErrorsFlash">
+        <% @user.errors.full_messages.each do |error| %>
+        <span><%= error %> |</span>
+        <% end %>
+    </section>
+
+    <section class="ExitErrorsFlash" onclick="exit();">
+        X
+    </section>
+<% end %>
+
+<section class="UsersHeader">
+    <a href=<%= root_path %>>
+        <div class="UsersHeader__logo">
+            <%= image_tag 'kodeup-logo-medium2.png' %>
+        </div>
+    </a>
+   
+    <div class="UsersHeader__getwet">
+        <%= image_tag 'kodeup-getwet1.png' %>
+        <span class="UsersHeader__getwettxt">From zero to deploy!</span>
+    </div>
+
+</section>
+
+<section class="UsersMain">
+    <%= form_for @user, local: true do |form| %>
+        <%= form.label :username, class: "UsersMain__label" %>
+        <%= form.text_field :username, class: "UsersMain__textbox" %>
+
+        <%= form.label :email, class: "UsersMain__label" %>
+        <%= form.email_field :email, class: "UsersMain__textbox" %>
+
+        <%= form.label :user_type, class: "UsersMain__label" %>
+        <%= form.select :user_type, [["Viewer"], ["Author"]], class: "UsersMain__textbox" %>
+
+        <%= form.label :password, class: "UsersMain__label" %>
+        <%= form.password_field :password, class: "UsersMain__textbox" %>
+
+        <%= form.label :password_confirmation, class: "UsersMain__label", value: "Confirm Password" %>
+        <%= form.password_field :password_confirmation, class: "UsersMain__textbox" %>
+
+        <%= form.submit "Sign UP", class: "UsersMain__btn"%>
+    <% end %>
+
+    <div class="UsersMain__logintext">
+        <%= link_to 'Or Login To Your Account.', login_path %>
+    </div>
+</section>
+
+
+<section class="UsersFooter">
+    <div class="UsersFooter__text">
+        &copy;2018 KodeUP. All rights reserved.
+    </div>
+</section>

@@ -1,0 +1,24 @@
+@import "colors/color";
+
+
+.flash-danger, .flash-success {
+    text-align: center;
+    font-size: 12pt;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: center;
+    border-radius: 4px;
+    margin: 8px 0px;
+
+}
+
+.flash-success {
+    background-color: kodeup-color('success-bg');
+    color: kodeup-color('sucess-fg');
+}
+
+.flash-danger {
+    background-color: kodeup-color('error-bg');
+    color: kodeup-color('error-fg');
+    border: 1px solid kodeup-color('error-br')
+}
