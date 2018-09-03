@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        @post.id = current_user.id
+        @post.user_id = current_user.id
 
         if @post.save
             flash[:success] = "Post was successfully added"

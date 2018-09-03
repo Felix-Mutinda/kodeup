@@ -26,13 +26,13 @@
     </div>
 </a >
 
-<a href= <%= posts_path %> >
+<a href= <%= post_path(@post) %> >
     <div class="authorshow--btn">
         Edit
     </div>
 </a >
 
-<a href= <%= posts_path %> data-method="delete", data-confirm="Are you sure?", rel="nofollow">
+<a href= <%= post_path(@post) %> data-method="delete", data-confirm="Are you sure?", rel="nofollow">
     <div class="authorshow--btn">
         Delete
     </div>
