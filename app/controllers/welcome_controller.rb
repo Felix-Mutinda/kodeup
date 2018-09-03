@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       log_in @user
+      flash[:success] = "Welcome back #{@user.username}"
       redirect_to posts_path
     else
       @myFlash = "Invalid Username or Email"

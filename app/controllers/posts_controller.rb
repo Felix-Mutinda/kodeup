@@ -57,8 +57,8 @@ class PostsController < ApplicationController
         @post =  Post.find_by(id: params[:id])
             
         if @post.update(post_params)
-            redirect_to post_path(@post),
-            success: "Post was successfully updated!"
+            flash[:success] = "Post was successfully updated!"
+            redirect_to post_path(@post)
         else
             flash.now[:danger] = "Post can't be empty!"
             render "posts/author_edit"

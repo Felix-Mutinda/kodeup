@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
         if @user.save
             log_in @user
-            flash[:succsess] = "Welcome to the KodeUP community!"
+            flash[:success] = "Welcome to the KodeUP community!"
             redirect_to posts_path
         else
             render "new"
