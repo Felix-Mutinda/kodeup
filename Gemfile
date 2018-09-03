@@ -68,3 +68,6 @@ gem 'bcrypt'
 
 # for assert_template
 gem "rails-controller-testing"
+
+# use jquery library
+gem "jquery-rails"
