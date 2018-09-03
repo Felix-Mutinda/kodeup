@@ -133,5 +133,7 @@ aside {
         @include footer;
        // bottom: 0px;
         left: 500px;
+        position: relative;
+        bottom: 0px;
     }
 }

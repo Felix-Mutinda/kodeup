@@ -67,10 +67,15 @@ class PostsController < ApplicationController
 
 
     def destroy
-        @post = Post.find_by(id: params[:id])
-        @post.destroy
+        if current_user.user_type == "author"
+            @post = Post.find_by(id: params[:id])
+            @post.destroy
 
-        redirect_to posts_path
+            redirect_to posts_path
+        else
+            flash[:danger]= "Unallowed behavior!"
+            redirect_to posts_path
+        end
     end
 
     private
