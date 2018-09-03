@@ -7,11 +7,11 @@
             </div>
         </a>
         
-        <a href=<%= logout_path %> data-method="delete" rel="nofollow">
+        <%= link_to logout_path, method: :delete do  %>
             <div class="postsIndexHead__nav--signout">
             Sign Out
             </div>
-        </a >
+        <% end %>
 
     </div>
 
@@ -20,11 +20,11 @@
     </div>
 </section>
 
-<a href= <%= posts_path %> >
+<%= link_to posts_path do  %>
     <div class="authorshow--btn">
         Back
     </div>
-</a >
+<% end %>
 
 <a href= <%= post_path(@post) %> >
     <div class="authorshow--btn">
@@ -32,11 +32,11 @@
     </div>
 </a >
 
-<a href= <%= post_path(@post) %> data-method="delete", data-confirm="Are you sure?", rel="nofollow">
+<%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?"} do %>
     <div class="authorshow--btn">
         Delete
     </div>
-</a >
+<% end %>
 
 <section class="postsIndexMain">
     <div  class="postsIndexMain__body">

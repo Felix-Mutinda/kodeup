@@ -7,11 +7,11 @@
             </div>
         </a>
         
-        <a href=<%= logout_path %> data-method="delete" rel="nofollow">
+        <%= link_to logout_path, method: :delete do  %>
             <div class="postsIndexHead__nav--signout">
             Sign Out
             </div>
-        </a >
+        <% end %>
 
     </div>
 
