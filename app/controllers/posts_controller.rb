@@ -29,6 +29,15 @@ class PostsController < ApplicationController
         end
     end
 
+    def edit 
+        if current_user.user_type == "author"
+            @post = Post.find_by(id: params[:id])
+            render "posts/author_edit"
+        else
+            redirect_to posts_url
+        end
+    end
+
 
     def create
         @post = Post.new(post_params)
@@ -40,6 +49,19 @@ class PostsController < ApplicationController
         else
             flash.now[:danger] = "Posts can not be empty!"
             render "posts/author_new"
+        end
+    end
+
+
+    def update
+        @post =  Post.find_by(id: params[:id])
+            
+        if @post.update(post_params)
+            redirect_to post_path(@post),
+            success: "Post was successfully updated!"
+        else
+            flash.now[:danger] = "Post can't be empty!"
+            render "posts/author_edit"
         end
     end
 
